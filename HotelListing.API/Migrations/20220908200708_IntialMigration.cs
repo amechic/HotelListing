@@ -9,7 +9,7 @@ namespace HotelListing.API.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Counties",
+                name: "Countries",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -19,7 +19,7 @@ namespace HotelListing.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Counties", x => x.Id);
+                    table.PrimaryKey("PK_Countries", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -37,9 +37,9 @@ namespace HotelListing.API.Migrations
                 {
                     table.PrimaryKey("PK_Hotels", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Hotels_Counties_CountryId",
+                        name: "FK_Hotels_Countries_CountryId",
                         column: x => x.CountryId,
-                        principalTable: "Counties",
+                        principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -56,7 +56,7 @@ namespace HotelListing.API.Migrations
                 name: "Hotels");
 
             migrationBuilder.DropTable(
-                name: "Counties");
+                name: "Countries");
         }
     }
 }

@@ -37,7 +37,7 @@ namespace HotelListing.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Counties");
+                    b.ToTable("Countries");
 
                     b.HasData(
                         new

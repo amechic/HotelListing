@@ -39,7 +39,7 @@ namespace HotelListing.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Counties");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("HotelListing.API.Data.Hotel", b =>
